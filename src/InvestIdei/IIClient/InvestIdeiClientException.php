@@ -6,8 +6,8 @@
  * Time: 17:38
  */
 
-namespace InvestIdei\InvestIdeiClient;
+namespace InvestIdei\IIClient;
 
-class InvestIdeiClientException extends \Exception {
+class IIClientException extends \Exception {
 
 }

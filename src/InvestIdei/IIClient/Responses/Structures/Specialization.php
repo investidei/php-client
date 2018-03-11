@@ -6,9 +6,9 @@
  * Time: 17:53
  */
 
-namespace InvestIdei\InvestIdeiClient\Responses\Structures;
+namespace InvestIdei\IIClient\Responses\Structures;
 
-use InvestIdei\InvestIdeiClient\DataStructure;
+use InvestIdei\IIClient\DataStructure;
 
 class Specialization extends DataStructure {
 	/** @var string */

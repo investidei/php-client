@@ -1,8 +1,8 @@
 <?php
 
-namespace InvestIdei\InvestIdeiClient\Responses\Structures;
+namespace InvestIdei\IIClient\Responses\Structures;
 
-use InvestIdei\InvestIdeiClient\DataStructure;
+use InvestIdei\IIClient\DataStructure;
 
 class Broker extends DataStructure {
 	/** @var int */

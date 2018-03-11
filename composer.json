@@ -1,7 +1,7 @@
 {
     "name": "invest-idei/php-client",
     "type": "library",
-    "description": "Client for https://invest-idei.ru REST API",
+    "description": "PHP client for https://invest-idei.ru REST API",
     "license": "MIT",
     "keywords": ["invest-idei", "client", "api", "rest"],
     "authors": [
@@ -19,7 +19,7 @@
     },
     "autoload":{
         "psr-0": {
-            "InvestIdei\\InvestIdeiClient\\": "src/"
+            "InvestIdei\\IIClient\\": "src/"
         }
     }
 }

@@ -6,9 +6,9 @@
  * Time: 18:18
  */
 
-namespace InvestIdei\InvestIdeiClient\Responses\Structures;
+namespace InvestIdei\IIClient\Responses\Structures;
 
-use InvestIdei\InvestIdeiClient\DataStructure;
+use InvestIdei\IIClient\DataStructure;
 
 class Meta extends DataStructure {
 	/** @var int */

@@ -6,7 +6,7 @@
  * Time: 19:40
  */
 
-namespace InvestIdei\InvestIdeiClient\Responses\Structures;
+namespace InvestIdei\IIClient\Responses\Structures;
 
 class IdeasMeta extends Meta {
 	public $status;

@@ -6,9 +6,9 @@
  * Time: 18:05
  */
 
-namespace InvestIdei\InvestIdeiClient\Responses\Structures;
+namespace InvestIdei\IIClient\Responses\Structures;
 
-use InvestIdei\InvestIdeiClient\DataStructure;
+use InvestIdei\IIClient\DataStructure;
 
 class Investor extends DataStructure {
 	public $name;

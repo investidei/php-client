@@ -6,7 +6,7 @@
  * Time: 18:24
  */
 
-namespace InvestIdei\InvestIdeiClient;
+namespace InvestIdei\IIClient;
 
 abstract class Request {
 	protected $route;
