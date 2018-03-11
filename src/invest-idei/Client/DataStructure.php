@@ -1,6 +1,6 @@
 <?php
 
-namespace InvestIdei\IIClient;
+namespace InvestIdei\Client;
 
 use ArrayAccess;
 use JsonSerializable;

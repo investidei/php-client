@@ -1,15 +1,15 @@
 <?php
 
-namespace InvestIdei\IIClient;
+namespace InvestIdei\Client;
 
-use InvestIdei\IIClient\Responses\BrokersResponse;
-use InvestIdei\IIClient\Responses\DealsResponse;
-use InvestIdei\IIClient\Responses\IdeasResponse;
-use InvestIdei\IIClient\Responses\Structures\Deal;
-use InvestIdei\IIClient\Responses\Structures\InvestIdea;
+use InvestIdei\Client\Responses\BrokersResponse;
+use InvestIdei\Client\Responses\DealsResponse;
+use InvestIdei\Client\Responses\IdeasResponse;
+use InvestIdei\Client\Responses\Structures\Deal;
+use InvestIdei\Client\Responses\Structures\InvestIdea;
 use RestClient;
 
-class IIClient {
+class Client {
 	protected $key;
 
 	protected $version;
@@ -17,7 +17,7 @@ class IIClient {
 	protected $api;
 
 	/**
-	 * IIClient constructor.
+	 * Client constructor.
 	 *
 	 * @param        $key
 	 * @param string $version
@@ -41,7 +41,7 @@ class IIClient {
 	 * @param $params
 	 *
 	 * @return RestClient
-	 * @throws IIClientException
+	 * @throws ClientException
 	 */
 	protected function fire($route, $type, $params = null) {
 		$params = is_array($params) ? $params : [];
@@ -51,7 +51,7 @@ class IIClient {
 		$response = json_decode($rawResponse->response,true);
 
 		if ($rawResponse->info->http_code != 200 && is_null($response)) {
-			throw new IIClientException($rawResponse->response);
+			throw new ClientException($rawResponse->response);
 		}
 
 		if (!$response['success']) {
@@ -62,7 +62,7 @@ class IIClient {
 				$errors = $response['reason'];
 			}
 
-			throw new IIClientException($errors);
+			throw new ClientException($errors);
 		}
 
 		return $response;
@@ -72,7 +72,7 @@ class IIClient {
 	 * @param array|null $params
 	 *
 	 * @return IdeasResponse
-	 * @throws IIClientException
+	 * @throws ClientException
 	 */
 	function getIdeas($params = null) {
 		$route = '/ideas';
@@ -86,7 +86,7 @@ class IIClient {
 	 * @param $ideaId
 	 *
 	 * @return InvestIdea
-	 * @throws IIClientException
+	 * @throws ClientException
 	 */
 	function getIdeaById($ideaId) {
 		$route = "/ideas/$ideaId";
@@ -100,7 +100,7 @@ class IIClient {
 	 * @param array|null $params
 	 *
 	 * @return BrokersResponse
-	 * @throws IIClientException
+	 * @throws ClientException
 	 */
 	function getBrokers($params = null) {
 		$route = '/brokers';
@@ -114,7 +114,7 @@ class IIClient {
 	 * @param $params
 	 *
 	 * @return boolean
-	 * @throws IIClientException
+	 * @throws ClientException
 	 */
 	function addIdeaRating($params) {
 		$route = "/ideas/{$params['id']}/rating";
@@ -128,7 +128,7 @@ class IIClient {
 	 * @param array|null $params
 	 *
 	 * @return mixed
-	 * @throws IIClientException
+	 * @throws ClientException
 	 */
 	function getDeals($params = null) {
 		$route = '/insider-radar/deals';
@@ -142,7 +142,7 @@ class IIClient {
 	 * @param $dealId
 	 *
 	 * @return Deal
-	 * @throws IIClientException
+	 * @throws ClientException
 	 */
 	function getDealById($dealId) {
 		$route = "/insider-radar/deals/$dealId";

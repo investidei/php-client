@@ -1,6 +1,6 @@
 <?php
 
-namespace InvestIdei\IIClient\Requests;
+namespace InvestIdei\Client\Requests;
 
 use InvalidArgumentException;
 

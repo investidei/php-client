@@ -1,10 +1,10 @@
 <?php
 
-namespace InvestIdei\IIClient\Responses;
+namespace InvestIdei\Client\Responses;
 
-use InvestIdei\IIClient\DataStructure;
-use InvestIdei\IIClient\Responses\Structures\IdeasMeta;
-use InvestIdei\IIClient\Responses\Structures\InvestIdea;
+use InvestIdei\Client\DataStructure;
+use InvestIdei\Client\Responses\Structures\IdeasMeta;
+use InvestIdei\Client\Responses\Structures\InvestIdea;
 
 /**
  * Created by IntelliJ IDEA.

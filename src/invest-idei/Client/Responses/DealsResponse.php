@@ -6,11 +6,11 @@
  * Time: 23:56
  */
 
-namespace InvestIdei\IIClient\Responses;
+namespace InvestIdei\Client\Responses;
 
-use InvestIdei\IIClient\DataStructure;
-use InvestIdei\IIClient\Responses\Structures\Deal;
-use InvestIdei\IIClient\Responses\Structures\Meta;
+use InvestIdei\Client\DataStructure;
+use InvestIdei\Client\Responses\Structures\Deal;
+use InvestIdei\Client\Responses\Structures\Meta;
 
 class DealsResponse extends DataStructure {
 	/** @var Meta */

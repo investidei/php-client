@@ -6,9 +6,9 @@
  * Time: 18:08
  */
 
-namespace InvestIdei\IIClient\Responses\Structures;
+namespace InvestIdei\Client\Responses\Structures;
 
-use InvestIdei\IIClient\DataStructure;
+use InvestIdei\Client\DataStructure;
 
 class Shares extends DataStructure {
 	/** @var string */

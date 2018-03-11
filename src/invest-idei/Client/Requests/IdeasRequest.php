@@ -1,7 +1,7 @@
 <?php
-namespace InvestIdei\IIClient\Requests;
+namespace InvestIdei\Client\Requests;
 
-use InvestIdei\IIClient\Request;
+use InvestIdei\Client\Request;
 
 /**
  * Created by IntelliJ IDEA.
