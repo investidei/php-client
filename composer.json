@@ -1,5 +1,5 @@
 {
-    "name": "invest-idei/php-client",
+    "name": "invest/php-client",
     "type": "library",
     "description": "PHP client for https://invest-idei.ru REST API",
     "license": "MIT",
