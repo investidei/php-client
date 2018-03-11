@@ -1,0 +1,25 @@
+{
+    "name": "invest-idei/invest-idei-client",
+    "type": "library",
+    "description": "Client for https://invest-idei.ru REST API",
+    "license": "MIT",
+    "keywords": ["invest-idei", "client", "api", "rest"],
+    "authors": [
+        {
+            "name": "Oleksii Ratnykov",
+            "email": "oleksii.ratnykov@gmail.com"
+        }
+    ],
+    "require": {
+        "tcdent/php-restclient": "^0.1.7",
+        "rappasoft/laravel-helpers": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.1@dev"
+    },
+    "autoload":{
+        "psr-0": {
+            "InvestIdei\\InvestIdeiClient\\": "src/"
+        }
+    }
+}
