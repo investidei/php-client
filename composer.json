@@ -1,13 +1,13 @@
 {
-    "name": "invest-idei/invest-idei-client",
+    "name": "invest-idei/php-client",
     "type": "library",
     "description": "Client for https://invest-idei.ru REST API",
     "license": "MIT",
     "keywords": ["invest-idei", "client", "api", "rest"],
     "authors": [
         {
-            "name": "Oleksii Ratnykov",
-            "email": "oleksii.ratnykov@gmail.com"
+            "name": "InvestIdei.ru",
+            "email": "hello@invest-idei.ru"
         }
     ],
     "require": {
