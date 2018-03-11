@@ -9,7 +9,7 @@ use InvestIdei\Client\Responses\Structures\Deal;
 use InvestIdei\Client\Responses\Structures\InvestIdea;
 use RestClient;
 
-class Client {
+class InvestIdeiClient {
 	protected $key;
 
 	protected $version;
