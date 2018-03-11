@@ -1,8 +1,8 @@
 <?php
 
-namespace InvestIdei\Client\Responses\Structures;
+namespace InvestIdei\InvestIdeiClient\Responses\Structures;
 
-use InvestIdei\Client\DataStructure;
+use InvestIdei\InvestIdeiClient\DataStructure;
 
 class InvestIdea extends DataStructure {
 	/** @var int */

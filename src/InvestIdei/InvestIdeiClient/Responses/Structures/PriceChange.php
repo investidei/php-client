@@ -6,9 +6,9 @@
  * Time: 18:11
  */
 
-namespace InvestIdei\Client\Responses\Structures;
+namespace InvestIdei\InvestIdeiClient\Responses\Structures;
 
-use InvestIdei\Client\DataStructure;
+use InvestIdei\InvestIdeiClient\DataStructure;
 
 class PriceChange extends DataStructure {
 	/** @var float */

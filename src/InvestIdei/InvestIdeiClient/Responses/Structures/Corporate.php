@@ -6,9 +6,9 @@
  * Time: 18:03
  */
 
-namespace InvestIdei\Client\Responses\Structures;
+namespace InvestIdei\InvestIdeiClient\Responses\Structures;
 
-use InvestIdei\Client\DataStructure;
+use InvestIdei\InvestIdeiClient\DataStructure;
 
 class Corporate extends DataStructure {
 	public $name;

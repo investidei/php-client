@@ -6,10 +6,10 @@
  * Time: 23:54
  */
 
-namespace InvestIdei\Client\Responses;
+namespace InvestIdei\InvestIdeiClient\Responses;
 
-use InvestIdei\Client\DataStructure;
-use InvestIdei\Client\Responses\Structures\Broker;
+use InvestIdei\InvestIdeiClient\DataStructure;
+use InvestIdei\InvestIdeiClient\Responses\Structures\Broker;
 
 class BrokersResponse extends DataStructure {
     /** @var Broker[] */

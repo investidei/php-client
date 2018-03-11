@@ -1,12 +1,12 @@
 <?php
 
-namespace InvestIdei\Client;
+namespace InvestIdei\InvestIdeiClient;
 
-use InvestIdei\Client\Responses\BrokersResponse;
-use InvestIdei\Client\Responses\DealsResponse;
-use InvestIdei\Client\Responses\IdeasResponse;
-use InvestIdei\Client\Responses\Structures\Deal;
-use InvestIdei\Client\Responses\Structures\InvestIdea;
+use InvestIdei\InvestIdeiClient\Responses\BrokersResponse;
+use InvestIdei\InvestIdeiClient\Responses\DealsResponse;
+use InvestIdei\InvestIdeiClient\Responses\IdeasResponse;
+use InvestIdei\InvestIdeiClient\Responses\Structures\Deal;
+use InvestIdei\InvestIdeiClient\Responses\Structures\InvestIdea;
 use RestClient;
 
 class InvestIdeiClient {
@@ -17,7 +17,7 @@ class InvestIdeiClient {
 	protected $api;
 
 	/**
-	 * Client constructor.
+	 * InvestIdeiClient constructor.
 	 *
 	 * @param        $key
 	 * @param string $version
@@ -40,8 +40,8 @@ class InvestIdeiClient {
 	 * @param $route
 	 * @param $params
 	 *
-	 * @return RestClient
-	 * @throws ClientException
+	 * @return RestInvestIdeiClient
+	 * @throws InvestIdeiClientException
 	 */
 	protected function fire($route, $type, $params = null) {
 		$params = is_array($params) ? $params : [];
@@ -51,7 +51,7 @@ class InvestIdeiClient {
 		$response = json_decode($rawResponse->response,true);
 
 		if ($rawResponse->info->http_code != 200 && is_null($response)) {
-			throw new ClientException($rawResponse->response);
+			throw new InvestIdeiClientException($rawResponse->response);
 		}
 
 		if (!$response['success']) {
@@ -62,7 +62,7 @@ class InvestIdeiClient {
 				$errors = $response['reason'];
 			}
 
-			throw new ClientException($errors);
+			throw new InvestIdeiClientException($errors);
 		}
 
 		return $response;
@@ -72,7 +72,7 @@ class InvestIdeiClient {
 	 * @param array|null $params
 	 *
 	 * @return IdeasResponse
-	 * @throws ClientException
+	 * @throws InvestIdeiClientException
 	 */
 	function getIdeas($params = null) {
 		$route = '/ideas';
@@ -86,7 +86,7 @@ class InvestIdeiClient {
 	 * @param $ideaId
 	 *
 	 * @return InvestIdea
-	 * @throws ClientException
+	 * @throws InvestIdeiClientException
 	 */
 	function getIdeaById($ideaId) {
 		$route = "/ideas/$ideaId";
@@ -100,7 +100,7 @@ class InvestIdeiClient {
 	 * @param array|null $params
 	 *
 	 * @return BrokersResponse
-	 * @throws ClientException
+	 * @throws InvestIdeiClientException
 	 */
 	function getBrokers($params = null) {
 		$route = '/brokers';
@@ -114,7 +114,7 @@ class InvestIdeiClient {
 	 * @param $params
 	 *
 	 * @return boolean
-	 * @throws ClientException
+	 * @throws InvestIdeiClientException
 	 */
 	function addIdeaRating($params) {
 		$route = "/ideas/{$params['id']}/rating";
@@ -128,7 +128,7 @@ class InvestIdeiClient {
 	 * @param array|null $params
 	 *
 	 * @return mixed
-	 * @throws ClientException
+	 * @throws InvestIdeiClientException
 	 */
 	function getDeals($params = null) {
 		$route = '/insider-radar/deals';
@@ -142,7 +142,7 @@ class InvestIdeiClient {
 	 * @param $dealId
 	 *
 	 * @return Deal
-	 * @throws ClientException
+	 * @throws InvestIdeiClientException
 	 */
 	function getDealById($dealId) {
 		$route = "/insider-radar/deals/$dealId";
